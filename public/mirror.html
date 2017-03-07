@@ -22,110 +22,73 @@
       </span>
     </div>
     
-    <!-- jack here -->
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-   
-
-<table class="flatTable">
-  <tr class="titleTr">
-    <td class="titleTd">Weather</td>
-    <td colspan="4"></td>
-    <td class="plusTd button"></td>
-  </tr>
-  <tr class="headingTr">
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td>Temperature</td>
-    <td>0.71</td>
-    <td>Cloud Cover</td>
-    <td>0</td>
-    <td>Dew point</td>
-    <td>40.85</td>
-      <div class="settingsIcons">
-        <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
-        <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
-        <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
-      </div> 
-    </td>
-  </tr>
-  <tr>
-    <td>Humidity</td>
-    <td>0.71</td>
-    <td>Icon</td>
-    <td>clear night</td>
-    <td>Storm Distance</td>
-    <td>256</td>
-      <div class="settingsIcons">
-        <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
-        <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
-        <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
-      </div> 
-    </td>
-  </tr>
-  
-  <tr>
-    <td>Ozone</td>
-    <td>295.54</td>
-    <td>Chance of rain</td>
-    <td>0</td>
-    <td>Pressure</td>
-    <td>1022.51</td>      
-      <div class="settingsIcons">
-        <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
-        <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
-        <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
-      </div>    
-     </td>
-  </tr>
- <tr>
-    <td>Summary</td>
-    <td>"clear"</td>
-    <td>Temperature</td>
-    <td>49 </td>
-    <td>Time</td>
-    <td>84-84-</td>
-      <div class="settingsIcons">
-        <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
-        <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
-        <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
-      </div> 
-    </td>
-  </tr>
- <tr>
-    <td>Visibility</td>
-    <td>10</td>
-    <td>Wind Bearing</td>
-    <td>56</td>
-    <td>Wind Speed</td>
-    <td>2.29</td>
-      <div class="settingsIcons">
-        <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
-        <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
-        <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
-      </div> 
-    </td>
-  </tr>
- 
- 
-
-</table>
-
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-
-</body>
-</html>
+        <div class="row appcontent twitter">
+      <div class="appheader">
+        <h2>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </h2>
+      </div>
+      <div class="scrollable">
+        <div class="row contentrow selected">
+          <p>Loading tweets...</p>
+        </div>
+      </div>
+    </div>
     
+    <div class="row appcontent weather">
+    <div class="appheader">
+      <h2 id="weather-icon">
+        Weather
+      </h2>
+    </div>
+    <div class="scrollable">
+      <table class="flatTable">
+        <tr>
+          <td>Temperature</td>
+          <td>0.71</td>
+          <td>Cloud Cover</td>
+          <td>0</td>
+          <td>Dew point</td>
+          <td>40.85</td>
+          </td>
+        </tr>
+        <tr>
+          <td>Humidity</td>
+          <td>0.71</td>
+          <td>Icon</td>
+          <td>clear night</td>
+          <td>Storm Distance</td>
+          <td>256</td>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Ozone</td>
+          <td>295.54</td>
+          <td>Chance of rain</td>
+          <td>0</td>
+          <td>Pressure</td>
+          <td>1022.51</td>
+        </tr>
+       <tr>
+          <td>Summary</td>
+          <td>"clear"</td>
+          <td>Temperature</td>
+          <td>49 </td>
+          <td>Time</td>
+          <td>84-84-</td>
+        </tr>
+       <tr>
+          <td>Visibility</td>
+          <td>10</td>
+          <td>Wind Bearing</td>
+          <td>56</td>
+          <td>Wind Speed</td>
+          <td>2.29</td>
+        </tr>
+      </table>
+      </div>
+    </div>
     
     <div class="row appbar">
       <div class="col-xs-1 col-xs-offset-4">
@@ -141,69 +104,7 @@
         <i class="fa fa-eercast" aria-hidden="true"></i>
       </div>
     </div>
-    <div class="row appcontent">
-      <div class="appheader">
-        <h2>
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </h2>
-      </div>
-      <div class="scrollable">
-        <div class="row contentrow selected">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-        <div class="row contentrow">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-        <div class="row contentrow">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-        <div class="row contentrow">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-        <div class="row contentrow">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-        <div class="row contentrow">
-          <div class="col-xs-1">
-            <img class="img-responsive" src="http://www.newdesignfile.com/postpic/2014/07/generic-facebook-profile_352867.png">
-          </div>
-          <div class="col-xs-8">
-            <b>Ethan Lee (@thatethanlee)</b>
-            <p>I had a baja chicken sandwich today!</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leapjs/0.6.1/leap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

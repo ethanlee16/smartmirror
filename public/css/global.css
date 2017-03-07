@@ -68,6 +68,10 @@ h2 {
   height: 4.2in;
 }
 
+.weather .scrollable {
+  margin-top: 0.7in;
+}
+
 .scrollable::-webkit-scrollbar { 
   display: none;
 }
