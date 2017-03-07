@@ -1,0 +1,9 @@
+[submodule "paintball"]
+	path = paintball
+	url = https://github.com/cabbibo/paintball
+[submodule "public/DRAGONFISH"]
+	path = public/DRAGONFISH
+	url = https://github.com/cabbibo/DRAGONFISH
+[submodule "public/paintball"]
+	path = public/paintball
+	url = https://github.com/cabbibo/paintball
