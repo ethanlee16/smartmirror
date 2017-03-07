@@ -22,7 +22,7 @@
       </span>
     </div>
     
-        <div class="row appcontent twitter">
+    <div class="row appcontent twitter">
       <div class="appheader">
         <h2>
           <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -44,70 +44,583 @@
     <div class="scrollable">
       <table class="flatTable">
         <tr>
-          <td>Temperature</td>
-          <td>0.71</td>
+          <td>Feels like</td>
+         <td id = 'apparentTemperaturetemperature'>0.71</td>
           <td>Cloud Cover</td>
-          <td>0</td>
+          <td id ="cloudCover">0</td>
           <td>Dew point</td>
-          <td>40.85</td>
+          <td id = "dewPoint">40.85</td>
           </td>
         </tr>
         <tr>
           <td>Humidity</td>
-          <td>0.71</td>
-          <td>Icon</td>
-          <td>clear night</td>
+          <td id = 'humidity'>0.71</td>
+          <td>Summary</td>
+          <td id="summary">"clear"</td>
           <td>Storm Distance</td>
-          <td>256</td>
+          <td id = "nearestStormDistance">256</td>
           </td>
         </tr>
         
         <tr>
           <td>Ozone</td>
-          <td>295.54</td>
+          <td id ="ozone">295.54</td>
           <td>Chance of rain</td>
-          <td>0</td>
+          <td id = "precipProbability">8</td>
           <td>Pressure</td>
-          <td>1022.51</td>
-        </tr>
-       <tr>
-          <td>Summary</td>
-          <td>"clear"</td>
-          <td>Temperature</td>
-          <td>49 </td>
-          <td>Time</td>
-          <td>84-84-</td>
+          <td id = "pressure">1022.51</td>
         </tr>
        <tr>
           <td>Visibility</td>
-          <td>10</td>
+          <td id = "visibility">9</td>
           <td>Wind Bearing</td>
-          <td>56</td>
+          <td id = "windBearing">56</td>
           <td>Wind Speed</td>
-          <td>2.29</td>
+          <td id = "windSpeed">2.29</td>
         </tr>
       </table>
       </div>
     </div>
     
-    <div class="row appbar">
-      <div class="col-xs-1 col-xs-offset-4">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
+    <!--<div class="row appbar">-->
+    <!--  <div class="col-xs-1 col-xs-offset-4">-->
+    <!--    <i class="fa fa-twitter" aria-hidden="true"></i>-->
+    <!--  </div>-->
+      
+    <!--  <div class="col-xs-1">-->
+    <!--    <i class="fa fa-cloud" aria-hidden="true"></i>-->
+    <!--  </div>-->
+    <!--  <div class="col-xs-1">-->
+    <!--    <i class="fa fa-eercast" aria-hidden="true"></i>-->
+    <!--  </div>-->
+    <!--</div>-->
+    
+   <div class="row appcontent paintball">
+      <div class="appheader">
+        <h2>
+          Paintball
+        </h2>
       </div>
-      <div class="col-xs-1">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </div>
-      <div class="col-xs-1">
-        <i class="fa fa-sun-o" aria-hidden="true"></i>
-      </div>
-      <div class="col-xs-1">
-        <i class="fa fa-eercast" aria-hidden="true"></i>
-      </div>
+    <div id="paintball" style="margin-top: 50px">
     </div>
+    <div id="GUI" style="display: none">
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leapjs/0.6.1/leap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/js/client.js"></script>
+<script src = "/paintball/lib/underscore.js"           ></script>
+<script src = "/paintball/lib/three.js"                ></script>
+<script src = "/paintball/lib/stats.min.js"            ></script>
+<script src = "/paintball/lib/TrackballControls.js"    ></script>
+<script src = "/paintball/lib/ShaderLoader.js"         ></script>
+<script src = "/paintball/lib/UserAudio.js"            ></script>
+<script src = "/paintball/lib/Stream.js"               ></script>
+<script src = "/paintball/lib/AudioController.js"      ></script>
+<script src = "/paintball/lib/AudioTexture.js"         ></script>
+<script src = "/paintball/lib/PhysicsRenderer.js"      ></script>
+<script src = "/paintball/lib/ParticleUtils.js"        ></script>
+<script src = "/paintball/lib/dat.gui.min.js"          ></script>
+<script src = "/paintball/lib/OBJLoader.js"            ></script>
+<script src = "/paintball/lib/Loader.js"                 ></script>
+<script src = "/paintball/lib/SubdivisionModifier.js"    ></script>
+<script src = "/paintball/lib/LeapTrackballControls.js"  ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leapjs/0.6.1/leap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/js/client.js"></script>
+<script src="/paintball/fonts/helvetiker_bold.typeface.js"></script>
+<script src="/paintball/fonts/helvetiker_regular.typeface.js"></script>
+
+
+<script src = "/paintball/GEM.js"                      ></script>
+<script src = "/paintball/GUI.js"                      ></script>
+
+
+<script src = "/paintball/Arrangements.js"             ></script>
+<script src = "/paintball/Text.js"                     ></script>
+<script src = "/paintball/CurlMesh.js"                 ></script>
+<script src = "/paintball/RepelerMesh.js"              ></script>
+<script src = "/paintball/N2.js"                       ></script>
+
+<script>
+
+  var container , camera, scene, renderer , stats;
+
+  var gem , gui;
+
+  var tv1 = new THREE.Vector3();
+  var tv2 = new THREE.Vector3();
+  var repelerMeshes = [];
+  var repelersHidden = true;
+
+  var cubeMapRendered = false;
+
+
+  var cubeMapSpheres = [];
+  var REPELERS = [];
+
+
+
+  // TODO: make into loader
+  var loaded = 0;
+  var neededToLoad = 1;
+
+
+  var controller = window.controller;
+
+  var loader = new Loader();
+  loader.liftCurtain();
+
+  var clock = new THREE.Clock();
+
+  var audioController = new AudioController();
+  audioController.mute.gain.value = 0;
+
+  var shaders = new ShaderLoader('/paintball/shaders');
+
+  shaders.load( 'ss-fire' , 'fire' , 'simulation' );
+  shaders.load( 'vs-cube' , 'cube' , 'vertex' );
+  shaders.load( 'fs-cube' , 'cube' , 'fragment' );
+  shaders.load( 'vs-sem' , 'sem' , 'vertex' );
+  shaders.load( 'fs-sem' , 'sem' , 'fragment' );
+  shaders.load( 'vs-finger' , 'finger' , 'vertex' );
+  shaders.load( 'fs-finger' , 'finger' , 'fragment' );
+
+  shaders.shaderSetLoaded = function(){
+   onLoad();
+  }
+
+  var matcap = THREE.ImageUtils.loadTexture('/paintball/img/rough-aluminium.jpg');
+  var modifier = new THREE.SubdivisionModifier( 1 );
+  var loadedMeshes = {}
+  
+  var objLoader  = new THREE.OBJLoader();
+  
+ 
+  var G_UNIFORMS = {
+
+    dT      : { type:"f" , value:0                            },
+    time    : { type:"f" , value:0                            },
+    t_audio : { type:"t" , value: audioController.texture     },
+
+  }
+
+
+ function init(){
+    scene = new THREE.Scene();
+    
+    camera = new THREE.PerspectiveCamera( 
+      50 ,
+      document.querySelector('.paintball').clientWidth / document.querySelector('.paintball').clientHeight,
+      10,
+      10000
+    );
+
+    // placing our camera position so it can see everything
+    camera.position.z = 2000 ;
+    camera.lookAt( new THREE.Vector3() );
+
+    cubeCamera = new THREE.CubeCamera( 20, 100000, 1024 );
+    cubeCamera.renderTarget.minFilter = THREE.LinearMipMapLinearFilter;
+    scene.add( cubeCamera );
+
+    // Getting the container in the right location
+    container     = document.querySelector('#paintball');
+    // container.id  = 'container';
+    
+    // document.body.appendChild( container );
+
+    // Getting the stats in the right position
+    stats = new Stats();
+    stats.domElement.id = 'stats';
+    // document.body.appendChild( stats.domElement );
+
+
+    // Setting up our Renderer
+    renderer = new THREE.WebGLRenderer({ alpha: true });
+
+    renderer.setSize( document.querySelector('.paintball').clientWidth - 75, document.querySelector('.paintball').clientHeight - 75 );
+    container.appendChild( renderer.domElement );
+    renderer.domElement.style.background="#000";
+    
+   /* fallback = new THREE.TrackballControls( camera , renderer.domElement);
+
+    fallback.minDistance = 1;
+    fallback.maxDistance = 3000;
+
+    controls = new THREE.LeapTrackballControls( camera , controller , fallback );
+
+    controls.zoom = 100;
+    controls.maxZoom = 3000;
+    controls.minZoom = 500;
+    controls.zoomDampening = .9;
+    controls.zoomMultiplier = 1;
+    controls.rotationSpeed = 3;
+    controls.rotationDampening = .95;*/
+
+
+    // Making sure our renderer is always the right size
+    window.addEventListener( 'resize', onWindowResize , false );
+    window.addEventListener( 'mousemove', onMouseMove , false );
+   
+  
+
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+  
+  
+
+
+
+    var path = "/paintball/img/cubemap/skybox/";
+    var format = '.jpg';
+    var urls = [
+        path + 'px' + format, path + 'nx' + format,
+        path + 'py' + format, path + 'ny' + format,
+        path + 'pz' + format, path + 'nz' + format
+    ];
+
+    
+   /* var path = "img/cubemap/space/";
+    var format = '.png';
+    var urls = [
+        path + 'px' + format, path + 'nx' + format,
+        path + 'py' + format, path + 'ny' + format,
+        path + 'pz' + format, path + 'nz' + format
+    ];
+
+
+   var path = "img/cubemap/brud/";
+    var format = '.jpg';
+    var urls = [
+        path + 'posx' + format, path + 'negx' + format,
+        path + 'posy' + format, path + 'negy' + format,
+        path + 'posz' + format, path + 'negz' + format
+    ];*/
+
+    var g = new THREE.IcosahedronGeometry( 1 , 2 );
+    var m = new THREE.MeshBasicMaterial({color:0x00000}); /*new THREE.ShaderMaterial( { 
+      vertexShader: shaders.vertexShaders.finger,
+      fragmentShader: shaders.fragmentShaders.finger,
+
+      blending: THREE.AdditiveBlending,
+      transparent: true,
+      uniforms:{
+
+        t_audio:G_UNIFORMS.t_audio,
+        custom1:{ type:"f" , value:.95 },
+
+      }
+    
+    } );*/
+
+    for( var i =0; i<50; i++ ){
+
+      var mesh = new THREE.Mesh( g , m );
+
+      var t = Math.random() * 2 * Math.PI;
+      var p = Math.random() * 2 * Math.PI;
+
+      mesh.target   = new THREE.Vector3();//toCart( 12 , t , p );
+      mesh.velocity = new THREE.Vector3();
+      mesh.power    = new THREE.Vector3( 1 , 1 , 1);
+
+      //mesh.position.copy( mesh.target );
+      REPELERS.push( mesh );
+
+      scene.add( mesh );
+
+    }
+
+   // Arrangements.plane( 20 , 'z' , -20 );
+    Arrangements.randomSphere( 10000 );
+
+    for( var i = 0; i < 50; i++ ){
+
+      REPELERS[i].ogTarget = REPELERS[i].target.clone();
+
+    }
+
+
+
+
+  //  var t = new Text('MOTION', 3 );
+
+    t = new THREE.Mesh( new THREE.IcosahedronGeometry( 100 , 6 ) );
+    //t.position.y = -80;
+    t.updateMatrix();
+
+
+    //var g = new THREE.Mesh( new THREE.IcosahedronGeometry( 3 , 4 ) );
+    gem = new RepelerMesh( 'Parameters' , t , REPELERS , {
+      vs: shaders.vertexShaders.sem,
+      fs: shaders.fragmentShaders.sem,
+      soul:{
+        repulsionPower:     { type:"f" , value: -60. , constraints:[-300  , 0] },
+        repulsionRadius:     { type:"f" , value: 100. , constraints:[ 0  , 1000] },
+      },
+      body:{
+        custom1:{type:"f" , value:.9 , constraints:[ .8 , 1 ]},
+        t_sem:{type:"t" , value: matcap }
+      }
+
+    }); 
+
+    gem.soul.reset( gem.t_og.value );
+    gem.toggle();
+
+    //stream.play();
+    controller.connect();
+  }
+
+
+  function animate(){
+
+
+
+    audioController.update();
+
+    G_UNIFORMS.dT.value = clock.getDelta();
+    G_UNIFORMS.time.value += G_UNIFORMS.dT.value;
+
+    gem.update();
+
+    
+    stats.update();
+     //camera.updateMatrix();
+
+
+    var p = gem.params; 
+    camera.position.x = p.rotationRadius * Math.sin( G_UNIFORMS.time.value * p.rotationSpeed );
+    camera.position.z = p.rotationRadius * Math.cos( G_UNIFORMS.time.value * p.rotationSpeed );
+    tv1.set( 0 , 0 , 0 );
+    camera.lookAt( tv1 );
+    camera.updateMatrix();
+
+    //controls.update();
+    updateFingers( controller.frame() );
+
+    for( var i = 0; i < REPELERS.length; i++ ){
+
+      if( !REPELERS[i].active ){
+      //console.log( REPELERS[i].target );
+        tv1.copy( REPELERS[i].target );
+
+        tv1.applyQuaternion( camera.quaternion );
+        
+        tv1.sub( REPELERS[i].position );
+
+        tv1.multiplyScalar( .1 );
+
+        
+        //console.log( tv1.x );
+        REPELERS[i].position.add( tv1 );
+         
+        var ind = i / (2 * REPELERS.length); 
+        var fI = Math.floor( ind * audioController.analyzer.array.length );
+        var p = audioController.analyzer.array[ fI ];
+
+        //console.log( p );
+        REPELERS[i].power.x = p / 128;
+
+      }
+      
+    }
+
+    
+    renderer.render( scene , camera );
+
+    requestAnimationFrame( animate );
+
+  }
+
+
+  function onMouseMove(e ){
+
+ 
+  }
+
+  // Resets the renderer to be the proper size
+  function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+   
+    var dpr = devicePixelRatio || 1;
+
+    //camUniforms.SS.value.x = window.innerWidth * dpr;
+    //camUniforms.SS.value.y = window.innerHeight * dpr;
+
+
+  }
+
+
+  function onLoad(){
+
+
+    loaded ++;
+
+    console.log(loaded );
+    if( loaded === neededToLoad ){
+
+      init();
+      animate();
+      
+   
+      /*if( stream ){
+      
+        stream.play();
+
+      }*/
+
+    }
+
+  }
+
+  function toCart( r , t , p ){
+
+    var x = r *(Math.sin(t))*(Math.cos(p));
+    var y = r *(Math.sin(t))*(Math.sin(p));
+    var z = r * (Math.cos(t));
+
+    return new THREE.Vector3(x,y,z);
+
+  }
+
+   function updateFingers( frame ){
+
+    if( frame.hands[0] ){
+
+      for( var i = 0; i < 25; i++ ){
+
+        var r = REPELERS[i];
+          r.active = true;
+
+
+        r.power.x = 1;
+
+        var bI =  i % 5 ;                     // Bone index
+        var fI = Math.floor( i / 5 );     // finger index
+
+        //console.log( fI , bI );
+        //console.log( frame );
+
+        var p = leapToScene( frame , frame.hands[0].fingers[fI].positions[bI] );
+
+        p[0] *= 100;
+        p[1] *= 100;
+        p[2] *= 100;
+        tv1.set( p[0] , p[1] , p[2] );
+
+
+          r.position.copy( camera.position );
+
+          tv1.applyQuaternion( camera.quaternion );
+
+          r.position.add( tv1 );
+
+          tv1.set( 0 , 0, -200 );
+          r.position.add( tv1.applyQuaternion( camera.quaternion ));
+
+
+      }
+
+      if( frame.hands[1] ){
+
+        for( var i = 0; i < 25; i++ ){
+
+
+          var r = REPELERS[i+25];
+
+          r.active = true;
+          r.power.x = 1;
+
+          var bI =  i % 5 ;                     // Bone index
+          var fI = Math.floor( i / 5 );     // finger index
+
+          //console.log( fI , bI );
+          //console.log( frame );
+
+          var p = leapToScene( frame , frame.hands[1].fingers[fI].positions[bI] );
+
+          p[0] *= 100;
+          p[1] *= 100;
+          p[2] *= 100;
+          tv1.set( p[0] , p[1] , p[2] );
+
+
+          r.position.copy( camera.position );
+
+          tv1.applyQuaternion( camera.quaternion );
+
+          r.position.add( tv1 );
+
+          tv1.set( 0 , 0, -200 );
+          r.position.add( tv1.applyQuaternion( camera.quaternion ));
+
+
+        }
+
+
+
+      }else{
+
+      
+        for( var i = 0; i < 25; i++ ){
+
+          r = REPELERS[ i + 25 ];
+          //r.power.x = 0;
+          r.active = false;
+
+        }
+
+      }
+
+
+      }else{
+
+       for( var i = 0; i < 25; i++ ){
+
+          r = REPELERS[ i ];
+          r.active = false;
+
+        }
+
+
+     /* for( var i = 0; i < REPELERS.length; i++ ){
+
+        var r = REPELERS[i];
+        var ogP = ogPositions[i];
+
+        r.position.copy( ogP );
+
+
+      }*/
+
+    }
+
+  }
+
+
+  function leapToScene( frame , position  ){
+
+
+   // console.log( position );
+    var p = frame.interactionBox.normalizePoint( position );
+
+    p[0] -= .5;
+    p[1] -= .5;
+    p[2] -= .5;
+
+    return p;
+
+  }
+
+
+
+</script>
   
 </body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span><div></div><div></div></html>
